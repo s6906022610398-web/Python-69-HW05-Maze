@@ -52,8 +52,7 @@ def maze_solver_with_conveyors(maze: list[list[str]]) -> dict:
             r, c = nr, nc
         return (r, c), cells
 
-    # BFS over non-conveyor landing cells. Every transition costs one
-    # normal step; conveyor movement after entering it costs zero.
+    
     distance = [[-1] * cols for _ in range(rows)]
     previous = [[None] * cols for _ in range(rows)]
     edge_path = [[None] * cols for _ in range(rows)]
